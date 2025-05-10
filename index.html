@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Eltahir "LT" Elawad</h1>
+    </header>
+
+    <main>
+        <section id="about">
+            <div id="bio">
+                <h2>Bio</h2>
+                <p>Computer Science and Math graduate. I love technology, chess, running, calisthenics, and music.</p>
+                <p>It's very easy to get good at something. Just do it.</p>
+            </div>
+            <div id="photo">
+                <h2>Photo</h2>
+                <!-- Placeholder for photo -->
+                <img src="assets/images/placeholder_photo.jpg" alt="My Photo" style="width: 200px; height: auto;">
+            </div>
+        </section>
+
+        <section id="content-sections">
+            <div class="content-block full-width">
+                <h2>Projects</h2>
+                <h4>Detective Conan OST Manga Reader:</h4>
+                <p class="project-description">I am a long-time Detective Conan enthusiast and I love the OST. I decided to create a manga reader that plays the OST while you read the manga. The tech stack is Next.js, Supabase, and Google Cloud Storage for hosting images and audio, Google Gemini for image classification, Cloud Functions coupled with Cloud Tasks for background processing and job queueing, the whole app is hosted as a container on Google Cloud Run, and a CI/CD pipeline set up with Cloud Build for automated build and deployment.
+                    <a href="https://github.com/el-tahir/audio-manga">View on GitHub</a>
+                    <a href="https://audio-manga-app-654693812259.us-east4.run.app">View on Google Cloud Run</a>
+                    <br>
+                    <br>
+                    more projects to come...
+                </p>
+            </div>
+            <div class="content-block">
+                <h2>Chess</h2>
+                <ul>
+                    <li>Chess enthusiast</li>
+                    <li>Peak rating 2360 in bullet (lichess.org)</li>
+                    <li>No over-the-board rating</li>
+                    <li><a href="https://lichess.org/@/EltahirAmin">View on lichess.org</a></li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <h2>Calisthenics</h2>
+                <ul>
+                    <li>Calisthenics, bodyweight purist (no external weights)</li>
+                    <li>Can do a muscle up :)</li>
+                    <li>Endurance is king: reps, reps, reps</li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <h2>Running</h2>
+                <ul>
+                    <li>Running saved my life</li>
+                    <li>Around 20 miles a week</li>
+                    <li>The running flow state is the greatest feeling in the world</li>
+                    <li><a href="https://www.strava.com/athletes/128599432">View on Strava</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eltahir Elawad</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

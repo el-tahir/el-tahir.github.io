@@ -1,0 +1,126 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* Modern system font stack */
+    margin: 0;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    /* border-bottom: 1px solid #555; */ /* Removed border */
+}
+
+main {
+    padding: 20px;
+    max-width: 800px; /* Add a max-width for better readability on wide screens */
+    margin: 0 auto; /* Center the main content */
+}
+
+#about {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    /* border-bottom: 1px solid #555; */ /* Removed border */
+}
+
+#bio {
+    flex-basis: 60%;
+}
+
+#photo {
+    flex-basis: 35%;
+    text-align: center;
+}
+
+#photo img {
+    /* border: 2px solid #fff; */ /* Removed border */
+    max-width: 100%;
+}
+
+#content-sections {
+    display: flex;
+    /* justify-content: space-around; */ /* Let items flow naturally */
+    flex-wrap: wrap;
+}
+
+.content-block.full-width {
+    flex-basis: 100%;
+    margin-bottom: 20px; /* Add some space below full-width block */
+}
+
+.content-block {
+    flex-basis: 100%; /* Make all content blocks full width by default for simpler layout */
+    /* min-width: 250px; */ /* Not needed if full-width */
+    /* border: 1px solid #555; */ /* Removed border */
+    padding: 0 0 15px 0; /* Adjust padding, remove side padding if blocks are full width */
+    margin-bottom: 10px;
+    /* background-color: #444; */ /* Removed background color */
+    box-sizing: border-box;
+}
+
+.content-block h2 {
+    /* text-align: center; */ /* Left-align headings like the example */
+    text-align: left;
+    margin-top: 0;
+    font-size: 1.5em; /* Slightly larger heading for sections */
+}
+
+.content-block h4 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; /* Space below project title */
+}
+
+.project-description a {
+    display: block; /* Make links in project description take full width */
+    margin-top: 8px; /* Space above each link */
+}
+
+.content-block ul {
+    padding-left: 20px; /* Indent bullet points */
+    list-style-type: disc; /* Standard disc bullets */
+    margin-top: 0.5em; /* Space above lists */
+}
+
+.content-block p,
+.content-block li {
+    line-height: 1.6; /* Improve readability */
+}
+
+a {
+    color: #0000EE; /* Standard blue link color */
+}
+
+a:visited {
+    color: #551A8B; /* Standard purple for visited links */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    /* border-top: 1px solid #555; */ /* Removed border */
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #555; /* Lighter text for footer */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #about {
+        flex-direction: column; /* Stack bio and photo on smaller screens */
+        align-items: center; /* Center items when stacked */
+    }
+
+    #bio,
+    #photo {
+        flex-basis: 100%; /* Allow them to take full width when stacked */
+        text-align: center; /* Center bio text when stacked */
+        margin-bottom: 20px;
+    }
+
+    #photo {
+        margin-bottom: 0;
+    }
+} 
