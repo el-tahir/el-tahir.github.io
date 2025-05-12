@@ -21,48 +21,62 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    /* border-bottom: 1px solid #555; */ /* Removed border */
+    margin-bottom: 40px;
+    padding: 32px 40px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07), 0 1.5px 4px 0 rgba(0,0,0,0.03);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #bio {
     flex-basis: 60%;
 }
 
-#bio h2 { /* Added rule for bio heading */
+#bio h2 {
     margin-top: 0;
 }
 
 #connect {
-    flex-basis: 35%;
+    flex-basis: 30%;
     text-align: left;
-    /* padding-left: 20px; */ /* Removed padding */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
 }
 
 #connect h2 {
-    margin-top: 0; /* Align heading with bio heading */
+    margin-top: 0;
     margin-bottom: 0.8em;
 }
 
 #connect p {
-    margin: 0.5em 0; /* Space between links */
+    margin: 0;
 }
 
 #connect a {
-    display: inline-block; /* Allow padding and background */
-    padding: 8px 15px;
-    background-color: #eee; /* Light grey background */
-    color: #333; /* Darker text for contrast */
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #f5f5f5;
+    color: #222;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+    border-radius: 6px;
+    font-size: 1.08em;
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    border: 1px solid #e0e0e0;
 }
 
 #connect a:hover,
 #connect a:focus {
-    background-color: #ddd; /* Slightly darker on hover/focus */
-    color: #000;
+    background-color: #e0e7ff;
+    color: #1a237e;
+    box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+    border-color: #b3b3ff;
 }
 
 #content-sections {
@@ -142,21 +156,19 @@ footer {
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #about {
-        flex-direction: column; /* Stack bio and photo on smaller screens */
-        align-items: center; /* Center items when stacked */
+        flex-direction: column;
+        align-items: stretch;
+        padding: 24px 10px;
     }
-
-    #bio,
-    #connect { /* Updated from #photo to #connect */
+    #bio, #connect {
         flex-basis: 100%;
         text-align: center;
-        margin-bottom: 20px;
-        padding-left: 0; /* Reset padding for centered mobile view */
+        align-items: center;
     }
-
-    #connect { /* Updated from #photo to #connect */
-        margin-bottom: 0;
+    #connect {
+        align-items: center;
+        margin-top: 18px;
     }
 } 
