@@ -7,7 +7,7 @@ body {
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px; /* Increased padding */
     /* border-bottom: 1px solid #555; */ /* Removed border */
 }
 
@@ -30,14 +30,39 @@ main {
     flex-basis: 60%;
 }
 
-#photo {
-    flex-basis: 35%;
-    text-align: center;
+#bio h2 { /* Added rule for bio heading */
+    margin-top: 0;
 }
 
-#photo img {
-    /* border: 2px solid #fff; */ /* Removed border */
-    max-width: 100%;
+#connect {
+    flex-basis: 35%;
+    text-align: left;
+    /* padding-left: 20px; */ /* Removed padding */
+}
+
+#connect h2 {
+    margin-top: 0; /* Align heading with bio heading */
+    margin-bottom: 0.8em;
+}
+
+#connect p {
+    margin: 0.5em 0; /* Space between links */
+}
+
+#connect a {
+    display: inline-block; /* Allow padding and background */
+    padding: 8px 15px;
+    background-color: #eee; /* Light grey background */
+    color: #333; /* Darker text for contrast */
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+#connect a:hover,
+#connect a:focus {
+    background-color: #ddd; /* Slightly darker on hover/focus */
+    color: #000;
 }
 
 #content-sections {
@@ -48,24 +73,27 @@ main {
 
 .content-block.full-width {
     flex-basis: 100%;
-    margin-bottom: 20px; /* Add some space below full-width block */
+    margin-bottom: 20px;
+    border-top: none; /* Ensure the first block (Projects) doesn't have a top border if it's full-width */
 }
 
 .content-block {
-    flex-basis: 100%; /* Make all content blocks full width by default for simpler layout */
-    /* min-width: 250px; */ /* Not needed if full-width */
-    /* border: 1px solid #555; */ /* Removed border */
-    padding: 0 0 15px 0; /* Adjust padding, remove side padding if blocks are full width */
+    flex-basis: 100%;
+    padding: 15px 0;
     margin-bottom: 10px;
-    /* background-color: #444; */ /* Removed background color */
     box-sizing: border-box;
+    border-top: 1px solid #eee; /* Subtle top border for separation */
+}
+
+.content-block:first-child {
+    border-top: none; /* No top border for the very first content block */
 }
 
 .content-block h2 {
-    /* text-align: center; */ /* Left-align headings like the example */
     text-align: left;
     margin-top: 0;
-    font-size: 1.5em; /* Slightly larger heading for sections */
+    font-size: 1.5em;
+    margin-bottom: 0.7em; /* Added bottom margin for separation */
 }
 
 .content-block h4 {
@@ -74,8 +102,8 @@ main {
 }
 
 .project-description a {
-    display: block; /* Make links in project description take full width */
-    margin-top: 8px; /* Space above each link */
+    display: block;
+    margin-top: 6px; /* Slightly reduced margin */
 }
 
 .content-block ul {
@@ -99,11 +127,18 @@ a:visited {
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px; /* Increased padding */
     /* border-top: 1px solid #555; */ /* Removed border */
     margin-top: 30px;
     font-size: 0.9em;
     color: #555; /* Lighter text for footer */
+}
+
+.more-projects {
+    font-style: italic;
+    color: #777; /* Lighter text color */
+    font-size: 0.9em;
+    margin-top: 10px;
 }
 
 /* Responsive adjustments */
@@ -114,13 +149,14 @@ footer {
     }
 
     #bio,
-    #photo {
-        flex-basis: 100%; /* Allow them to take full width when stacked */
-        text-align: center; /* Center bio text when stacked */
+    #connect { /* Updated from #photo to #connect */
+        flex-basis: 100%;
+        text-align: center;
         margin-bottom: 20px;
+        padding-left: 0; /* Reset padding for centered mobile view */
     }
 
-    #photo {
+    #connect { /* Updated from #photo to #connect */
         margin-bottom: 0;
     }
 } 
