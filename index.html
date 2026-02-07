@@ -1,81 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eltahir Elawad</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Eltahir "LT" Elawad</h1>
-    </header>
-
-    <main>
-        <section id="about">
-            <div id="bio">
-                <h2>Bio</h2>
-                <p>Computer Science and Math graduate. I love technology, chess, running, calisthenics, and music.</p>
-                <p>It's very easy to get good at something. Just do it.</p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Eltahir Elawad | Systems Engineer</title>
+        <meta
+            name="description"
+            content="Eltahir Elawad - C++ systems engineer focused on performance, low-level architecture, and applied ML/audio systems."
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="hero">
+            <div class="top-row">
+                <p class="kicker">Systems Software Engineer</p>
+                <button
+                    id="theme-toggle"
+                    type="button"
+                    aria-label="Toggle color mode"
+                >
+                    Light mode
+                </button>
             </div>
-            <div id="connect">
-                <h2>Links</h2>
-                <p><a href="https://github.com/el-tahir/" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-                <p><a href="https://x.com/_eltahir_" target="_blank" rel="noopener noreferrer">X</a></p>
-                <p><a href="https://drive.google.com/file/d/1OW9qEbXCJpiYqVInEadKgogdpR-FyS5m/view?usp=sharing" rel="noopener noreferrer">Resume (PDF)</a></p>
-            </div>
-        </section>
+            <h1>Eltahir Elawad</h1>
+            <p class="summary">
+                C++ engineer focused on performance-critical systems, memory
+                management, and applied inference pipelines.
+            </p>
 
-        <section id="content-sections">
-            <div class="content-block full-width">
-                <h2>Projects</h2>
-                <h4>Karaoke Maker:</h4>
-                <p class="project-description">You don't know a song until you sing it. I built a karaoke video maker tool that creates a full karaoke video from search term or youtube link.
-                    <a href="https://github.com/el-tahir/karaoke">View on GitHub</a>
+            <nav class="hero-links" aria-label="Primary links">
+                <a
+                    href="https://github.com/el-tahir"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                >
+                <a href="mailto:eltahirelfadil2011@gmail.com">Email</a>
+                <a
+                    href="https://drive.google.com/file/d/1OW9qEbXCJpiYqVInEadKgogdpR-FyS5m/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Resume</a
+                >
+            </nav>
+        </header>
+
+        <main>
+            <section class="panel" id="skills">
+                <h2>Technical Focus</h2>
+                <ul class="skills-list">
+                    <li><span>Languages</span> C++17, C, Python</li>
+                    <li>
+                        <span>Systems</span> Linux, POSIX sockets, custom memory
+                        allocators, binary serialization
+                    </li>
+                    <li>
+                        <span>Performance</span> AVX2 intrinsics, profiling,
+                        ASan, UBSan
+                    </li>
+                    <li><span>Build/Tooling</span> CMake, Make, Git, Docker</li>
+                    <li>
+                        <span>Applied Domains</span> ONNX Runtime inference, DSP
+                        (STFT/ISTFT), engine/search algorithms
+                    </li>
+                </ul>
+            </section>
+
+            <section class="panel" id="projects">
+                <h2>Selected Projects</h2>
+
+                <article class="project-card">
+                    <h3>MNIST Neural Network (From Scratch)</h3>
+                    <p class="meta">C++, AVX2, POSIX Sockets</p>
+                    <p>
+                        Built an end-to-end neural network in pure C++ with
+                        custom matrix ops, training loop, model serialization,
+                        and TCP inference server.
+                    </p>
+                    <ul>
+                        <li>Optimized matrix multiply with AVX2 intrinsics.</li>
+                        <li>
+                            Reduced training time from
+                            <strong>187s to 31s</strong> on MNIST (~6x speedup).
+                        </li>
+                        <li>
+                            Added a Python client for real-time handwritten
+                            digit prediction.
+                        </li>
+                    </ul>
+                    <a
+                        href="https://github.com/el-tahir/mnist_cpp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View repository</a
+                    >
+                </article>
+
+                <article class="project-card">
+                    <h3>MDXNet C++ Audio Separator</h3>
+                    <p class="meta">C++17, ONNX Runtime, DSP, CMake</p>
+                    <p>
+                        Implemented a full C++ source-separation pipeline for
+                        instrumental extraction.
+                    </p>
+                    <ul>
+                        <li>
+                            Custom STFT/ISTFT processing with overlap-add
+                            reconstruction using KissFFT.
+                        </li>
+                        <li>
+                            ONNX Runtime integration for batched MDX-Net
+                            inference.
+                        </li>
+                        <li>
+                            CLI pipeline with FFmpeg preprocessing and WAV I/O.
+                        </li>
+                    </ul>
+                    <a
+                        href="https://github.com/el-tahir/mdxnet_cpp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View repository</a
+                    >
+                </article>
+
+                <article class="project-card">
+                    <h3>UCI Chess Engine</h3>
+                    <p class="meta">C++17, Search Algorithms</p>
+                    <p>
+                        Built a chess engine that speaks UCI with legal move
+                        generation, FEN parsing, and alpha-beta search.
+                    </p>
+                    <ul>
+                        <li>Implemented minimax + alpha-beta pruning.</li>
+                        <li>
+                            Added piece-square evaluation and terminal/CLI mode.
+                        </li>
+                    </ul>
+                    <a
+                        href="https://github.com/el-tahir/chess_engine"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View repository</a
+                    >
+                </article>
+
+                <article class="project-card">
+                    <h3>Custom Memory Allocators</h3>
+                    <p class="meta">C++17, Low-Level Systems</p>
+                    <p>
+                        Implemented free-list and linear allocators with STL
+                        allocator integration.
+                    </p>
+                    <ul>
+                        <li>
+                            Block splitting/coalescing, alignment-aware
+                            allocation, and realloc support.
+                        </li>
+                        <li>
+                            Stress-tested allocator correctness with randomized
+                            tests.
+                        </li>
+                        <li>Used ASan and UBSan for memory/UB validation.</li>
+                    </ul>
+                    <a
+                        href="https://github.com/el-tahir/mem_allocator"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >View repository</a
+                    >
+                </article>
+            </section>
+
+            <section class="panel" id="education">
+                <h2>Education</h2>
+                <p>
+                    <strong>The College of Wooster</strong> - B.A. in Computer
+                    Science and Mathematics (May 2024)
                 </p>
-                
-                <div class="youtube-card">
-                    <a href="https://youtu.be/qfLYFKJcoFc?si=q8K8JF21B-O8Vtv6" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube">
-                        <img src="https://img.youtube.com/vi/qfLYFKJcoFc/hqdefault.jpg" alt="Watch on YouTube">
-                        <span class="play-badge">▶</span>
-                    </a>
-                </div>
-                
-                <p class="more-projects">more projects to come...</p>
-            </div>
-            <div class="content-block">
-                <h2>Chess</h2>
-                <ul>
-                    <li>Chess enthusiast</li>
-                    <li>Peak rating 2360 in bullet (lichess.org)</li>
-                    <li>No over-the-board rating</li>
-                    <li><a href="https://lichess.org/@/EltahirAmin">View on lichess.org</a></li>
-                </ul>
-            </div>
-            <div class="content-block">
-                <h2>Calisthenics</h2>
-                <ul>
-                    <li>Calisthenics, bodyweight purist (no external weights)</li>
-                    <li>Can do a muscle up :)</li>
-                    <li>Endurance is king: reps, reps, reps</li>
-                </ul>
-            </div>
-            <div class="content-block">
-                <h2>Running</h2>
-                <ul>
-                    <li>Running saved my life</li>
-                    <li>Around 20 miles a week</li>
-                    <li>The running flow state is the greatest feeling in the world</li>
-                    <li><a href="https://www.strava.com/athletes/128599432">View on Strava</a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer>
-        <p>&copy; 2025 Eltahir Elawad</p>
-    </footer>
+        <footer>
+            <p>&copy; <span id="year"></span> Eltahir Elawad</p>
+        </footer>
 
-    <script src="script.js"></script>
-</body>
-</html> 
+        <script src="script.js"></script>
+    </body>
+</html>
